@@ -1,5 +1,3 @@
-// src/constants/index.js
-
 export const PIC_LIST = [
   "Aqif",
   "Vira",
@@ -27,5 +25,5 @@ export const STATUS_STYLE = {
   "Done":        { bg: "#DCFCE7", text: "#166534" },
 };
 
-// Fonnte WA API — isi token kamu di sini setelah daftar
+// Fonnte WA API
 export const FONNTE_TOKEN = "8Do7GftMC3wJbSqbTB6y";
