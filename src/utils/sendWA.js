@@ -1,23 +1,17 @@
-// src/utils/sendWA.js
-// ─────────────────────────────────────────────────────────────
-// INSTRUKSI: Isi nomor HP setiap PIC di bawah ini
-// Format   : "628" + nomor tanpa 0 di depan
-// Contoh   : 081234567890 → "6281234567890"
-// ─────────────────────────────────────────────────────────────
 import { FONNTE_TOKEN } from "../constants";
 
 export const PIC_PHONE = {
-  Aqif:   "6281234567890", // ← ganti dengan nomor asli
-  Vira:   "6281234567891", // ← ganti dengan nomor asli
-  Musa:   "6281234567892", // ← ganti dengan nomor asli
-  Farah:  "6281234567893", // ← ganti dengan nomor asli
-  Zafira: "6281234567894", // ← ganti dengan nomor asli
-  Khansa: "6281234567895", // ← ganti dengan nomor asli
-  Naufal: "6281234567896", // ← ganti dengan nomor asli
+  Aqif:   "6281234567890", 
+  Vira:   "6281234567891", 
+  Musa:   "6281234567892", 
+  Farah:  "6281234567893", 
+  Zafira: "6281234567894",
+  Khansa: "6281234567895", 
+  Naufal: "6281234567896", 
 };
 
 // ─────────────────────────────────────────────────────────────
-// Core sender — semua pesan lewat sini
+// Core sendeR
 // ─────────────────────────────────────────────────────────────
 async function sendWA(phone, message) {
   try {
@@ -45,7 +39,7 @@ async function sendWA(phone, message) {
 }
 
 // ─────────────────────────────────────────────────────────────
-// Helper: validasi nomor — pastikan bukan placeholder
+// Helper: validasi nomor
 // ─────────────────────────────────────────────────────────────
 function getPhone(pic) {
   const phone = PIC_PHONE[pic];
@@ -53,7 +47,7 @@ function getPhone(pic) {
     console.warn(`[WA] PIC "${pic}" tidak ada di PIC_PHONE.`);
     return null;
   }
-  // Cek kalau masih nomor contoh sequential (234567890)
+
   if (phone === "6281234567890" ||
       phone === "6281234567891" ||
       phone === "6281234567892" ||
@@ -68,8 +62,7 @@ function getPhone(pic) {
 }
 
 // ─────────────────────────────────────────────────────────────
-// 1. Notifikasi tugas baru
-//    Dipanggil saat SPV buat tugas (WhatShouldIDoToday.jsx)
+// 1. Notifikasi tugas baru, Dipanggil saat SPV buat tugas (WhatShouldIDoToday.jsx)
 // ─────────────────────────────────────────────────────────────
 export async function sendTaskNotification({ pic, judul, deadline, assignedBy }) {
   const phone = getPhone(pic);
@@ -100,7 +93,6 @@ export async function sendTaskNotification({ pic, judul, deadline, assignedBy })
 // ─────────────────────────────────────────────────────────────
 // 2. Reminder H-1 sebelum deadline
 //    Dipanggil saat app load di WhatShouldIDoToday & CSTodoPage
-//    Menggunakan localStorage untuk cegah kirim 2x per hari
 // ─────────────────────────────────────────────────────────────
 export async function sendDeadlineReminders(tasks) {
   const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
