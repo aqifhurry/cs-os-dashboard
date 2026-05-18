@@ -1,4 +1,3 @@
-// src/components/PageLayout.jsx
 // Wrapper layout: Navbar + halaman konten
 import Navbar from "./Navbar";
 
