@@ -1,8 +1,3 @@
-// src/components/Navbar.jsx
-// ─────────────────────────────────────────────────────────────
-// UNIFIED NAVBAR — satu file untuk SPV & CS.
-// Tidak ada duplikasi class name → tidak ada CSS conflict.
-// ─────────────────────────────────────────────────────────────
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
