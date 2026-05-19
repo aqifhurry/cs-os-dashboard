@@ -1,4 +1,3 @@
-// src/pages/spv/DashboardSPV.jsx
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import PageLayout from "../../components/PageLayout";
