@@ -1,4 +1,3 @@
-// src/pages/cs/CSFaqPage.jsx
 // CS: view only — bisa baca, search, copy script WA, tapi tidak bisa tambah/edit/hapus
 import { useState, useEffect } from "react";
 import { db } from "../../firebase";
