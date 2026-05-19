@@ -1,4 +1,3 @@
-// src/pages/Login.jsx
 import { useState } from "react";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
@@ -7,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 // ─────────────────────────────────────────────────────────────
-// Normalkan semua format nomor HP ke format 628xxx
+// format nomor HP ke format 628xxx
 // ─────────────────────────────────────────────────────────────
 const normalizePhone = (raw = "") => {
   const cleaned = String(raw).trim().replace(/[\s\-]/g, "");
