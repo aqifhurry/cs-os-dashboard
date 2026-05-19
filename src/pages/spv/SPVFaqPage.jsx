@@ -1,4 +1,3 @@
-// src/pages/spv/SPVFaqPage.jsx
 import { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import {
