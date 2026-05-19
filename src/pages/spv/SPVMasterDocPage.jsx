@@ -1,4 +1,3 @@
-// src/pages/spv/SPVMasterDocPage.jsx
 // ─────────────────────────────────────────────────────────────
 // SPV Master Doc — tambah dokumen + filter per kategori
 // ─────────────────────────────────────────────────────────────
@@ -11,7 +10,7 @@ import {
 import PageLayout from "../../components/PageLayout";
 import Navbar    from "../../components/Navbar";
 
-// Kategori default — SPV bisa ketik manual juga
+// Kategori default
 const DEFAULT_CATEGORIES = ["SOP", "Template", "Laporan", "OKR", "Training", "Referensi", "Lainnya"];
 
 export default function SPVMasterDocPage() {
