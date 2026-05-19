@@ -1,4 +1,3 @@
-// src/pages/WhatShouldIDoToday.jsx
 import { useState, useEffect, useRef } from "react";
 import { db } from "../firebase";
 import {
