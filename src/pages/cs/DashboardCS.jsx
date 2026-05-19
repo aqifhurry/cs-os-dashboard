@@ -2,7 +2,7 @@
 // Import Navbar
 // ─────────────────────────────────────────────────────────────
 import { useNavigate } from "react-router-dom";
-import Navbar from "../../components/Navbar";       // ← ganti dari NavbarCS
+import Navbar from "../../components/Navbar";
 import PageLayout from "../../components/PageLayout";
 
 export default function DashboardCS() {
