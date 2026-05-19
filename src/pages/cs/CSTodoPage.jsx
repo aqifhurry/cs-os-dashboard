@@ -1,6 +1,5 @@
-// src/pages/cs/CSTodoPage.jsx
 // ─────────────────────────────────────────────────────────────
-// CS Todo — view + update status + progress + H-1 reminder
+// CS Todo — view , update status , progress , H-1 reminder
 // ─────────────────────────────────────────────────────────────
 import { useState, useEffect, useRef } from "react";
 import { db } from "../../firebase";
