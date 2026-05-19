@@ -1,6 +1,5 @@
-// src/pages/cs/DashboardCS.jsx
 // ─────────────────────────────────────────────────────────────
-// Import Navbar (unified) — BUKAN NavbarCS lagi
+// Import Navbar
 // ─────────────────────────────────────────────────────────────
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";       // ← ganti dari NavbarCS
